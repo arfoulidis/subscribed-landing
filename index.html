@@ -114,15 +114,11 @@
         </div>
         <h1 class="brand-name">subscribed.gr</h1>
         <p>Your premium newsletter platform. Create, manage, and send beautiful newsletters to your audience with ease. Stay connected with your subscribers effortlessly.</p>
-        <button id="contactBtn">Get In Touch</button>
+        <a href="mailto:hi@subscribed.gr" class="cta-link">Get In Touch</a>
     </main>
 
     <script>
-        document.getElementById('contactBtn').addEventListener('click', function() {
-            window.location.href = 'mailto:hi@subscribed.gr';
-        });
-        
-        // Simple animation on scroll
+        // Simple animation on page load
         document.addEventListener('DOMContentLoaded', function() {
             const container = document.querySelector('.container');
             container.style.opacity = 0;
