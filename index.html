@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Subscribed.gr - Newsletter Platform</title>
+    <!-- Pico CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico/css/pico.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico/css/postcss.config.min.js">
+    <!-- Google Font -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap">
+    <style>
+        :root {
+            --primary: #764ba2;
+            --primary-hover: #667eea;
+        }
+        
+        body {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            font-family: 'Montserrat', sans-serif;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: white;
+            overflow: hidden;
+        }
+        
+        .container {
+            text-align: center;
+            max-width: 800px;
+            padding: 40px 20px;
+            animation: fadeIn 1s ease-in;
+        }
+        
+        .logo {
+            width: 180px;
+            height: 180px;
+            margin: 0 auto 30px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        
+        .logo i {
+            font-size: 5rem;
+            color: white;
+            background-color: rgba(255, 255, 255, 0.2);
+            padding: 30px;
+            border-radius: 50%;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+        }
+        
+        .brand-name {
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 700;
+            font-size: 3.5rem;
+            margin-bottom: 20px;
+            letter-spacing: -0.5px;
+        }
+        
+        p {
+            font-size: 1.2rem;
+            line-height: 1.6;
+            margin-bottom: 40px;
+            opacity: 0.9;
+        }
+        
+        button {
+            background-color: white !important;
+            color: var(--primary) !important;
+            border: none !important;
+            padding: 15px 32px !important;
+            font-size: 1.1rem !important;
+            border-radius: 30px !important;
+            cursor: pointer;
+            transition: all 0.3s ease !important;
+            font-weight: 600 !important;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2) !important;
+        }
+        
+        button:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3) !important;
+        }
+        
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        
+        @media (max-width: 768px) {
+            .brand-name {
+                font-size: 2.5rem;
+            }
+            
+            .logo {
+                width: 140px;
+                height: 140px;
+            }
+            
+            .logo i {
+                font-size: 3.5rem;
+                padding: 25px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <main class="container">
+        <div class="logo">
+            <i class="fas fa-envelope"></i>
+        </div>
+        <h1 class="brand-name">subscribed.gr</h1>
+        <p>Your premium newsletter platform. Create, manage, and send beautiful newsletters to your audience with ease. Stay connected with your subscribers effortlessly.</p>
+        <button id="contactBtn">Get In Touch</button>
+    </main>
+
+    <script>
+        document.getElementById('contactBtn').addEventListener('click', function() {
+            window.location.href = 'mailto:hi@subscribed.gr';
+        });
+        
+        // Simple animation on scroll
+        document.addEventListener('DOMContentLoaded', function() {
+            const container = document.querySelector('.container');
+            container.style.opacity = 0;
+            
+            setTimeout(() => {
+                container.style.opacity = 1;
+                container.style.transform = 'translateY(0)';
+            }, 100);
+        });
+    </script>
+</body>
+</html>
